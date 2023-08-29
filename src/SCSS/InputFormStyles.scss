@@ -1,0 +1,54 @@
+.pColor {
+    color: white;
+}
+
+.outputForm_style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btnCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: #384a38;
+    border-radius: 6px;
+    height: 100px;
+    width: 300px;
+
+    margin-bottom: 20px;
+
+    button {
+        background-color: white;
+        color: black;
+        border: 0;
+        padding: 6px;
+        border-radius: 6px;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    button:active {
+        background-color: #c6c6c6;
+    }
+}
+
+form {
+    padding: 4px;
+
+    .IPinput {
+        padding: 6px;
+        border-radius: 6px;
+        border: 0;
+        transition: 0.3s;
+    }
+
+    .IPinput:focus {
+        outline: none;
+        background-color: #c6c6c6;
+    }
+}
