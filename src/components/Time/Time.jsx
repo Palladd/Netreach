@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { Card, CardBody } from "@nextui-org/react";
 
+import API from "./API";
+
 const Time = (props) => {
 
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleString())
@@ -16,10 +18,13 @@ const Time = (props) => {
 
     return (
         <div>
-            <Card className="bg-zinc-900">
+            <Card className="bg-zinc-900 w-80 lg:h-80 sm:w-96 m-1">
                 <CardBody>
                     <p className="flex justify-center font-medium text-2xl text-white">{currentTime}</p>
                     <p className="flex justify-center font-normal text-lg text-zinc-300">{timezone}</p>
+
+                    <br />
+                    <API></API>
                 </CardBody>
             </Card>
         </div>

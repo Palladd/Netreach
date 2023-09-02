@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer tw_custom {
+  .w-84 {
+    width: 340px;
+  }
+  .h-84 {
+    height: 340px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

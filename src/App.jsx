@@ -1,31 +1,31 @@
 // import "./css/appStyles.css";
 import React, { useState } from "react";
-import { Spacer, NextUIProvider } from '@nextui-org/react';
-import './css/appStyles.css'
+import { Spacer, NextUIProvider } from "@nextui-org/react";
+import "./css/appStyles.css";
 
-import Cellurar from "./components/Cellular/Cellular";
-import LocationDataContainer from "./components/Containers/LocationDataContainer";
-import GoogleMaps from "./components/Location/GoogleMaps";
-import Time from "./components/Time";
-// import TestServersChildren from "./components/TestServersChildren";
+import Connection from "./components/Connection/Connection";
+import LocationDataContainer from "./components/Geolocation/LocationDataContainer";
+import GoogleMaps from "./components/Map/Map";
+import Time from "./components/Time/Time";
 
 const App = (props) => {
-  const [latlongData, setlatlongData] = useState('')
+  const [latlongData, setlatlongData] = useState("");
   const retback = (returnedData) => {
-    setlatlongData(...returnedData)
-  }
-
+    setlatlongData(...returnedData);
+  };
 
   return (
     <NextUIProvider>
-         <Time />
-         <Spacer y={3}/>
-         <LocationDataContainer latlongLoc={retback} />
-         {/* <Spacer y={2}/> */}
-         {/* <GoogleMaps locData={latlongData} /> TO WORK OUT */}
-         <Spacer y={3}/> 
-        <Cellurar />
-      </NextUIProvider>
+      <div className="flex flex-col items-center sm:flex-wrap lg:items-start lg:flex-row">
+        <Time />
+        <LocationDataContainer latlongLoc={retback} className="md:w-32" />
+        <GoogleMaps
+          className="w-36 dark text-foreground"
+          locData={latlongData}
+        />
+        <Connection />
+      </div>
+    </NextUIProvider>
   );
 };
 
