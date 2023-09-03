@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # other sensitive data
-*sd
+Hidden/
 
 
 # # ignore all .a files
