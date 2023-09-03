@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Spacer, NextUIProvider } from "@nextui-org/react";
 import "./css/appStyles.css";
 
-import Connection from "./components/Connection/Connection";
+import Connection from "./components/Connection/Connection_sd";
 import LocationDataContainer from "./components/Geolocation/LocationDataContainer";
 import GoogleMaps from "./components/Map/Map";
 import Time from "./components/Time/Time";

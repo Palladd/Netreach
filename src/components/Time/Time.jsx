@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Card, CardBody } from "@nextui-org/react";
 
-import API from "./API";
+import API from "./API_sd";
 
 const Time = (props) => {
 
