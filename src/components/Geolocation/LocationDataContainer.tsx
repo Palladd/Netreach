@@ -15,7 +15,7 @@ import "../../css/LocationDataContainer.css";
 const LocationDataContainer = (props) => {
   // Checking is location avaible
   const [isLocAvaiStr, setIsLocAvaiStr] = useState("");
-  const [isLocAvaiCol, setIsLocAvaiCol] = useState("");
+  const [isLocAvaiCol, setIsLocAvaiCol]: any = useState("");
 
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(
@@ -33,12 +33,12 @@ const LocationDataContainer = (props) => {
     setIsLocAvaiCol("warning");
   }
 
-  const [location, setLocation] = useState("No location avaible");
+  const [location, setLocation]: any = useState("No location avaible");
   const [errorColor, setErrorColor] = useState("#ecedee");
 
   setInterval(() => {
     navigator.geolocation.watchPosition((LocRes) => {
-      let NavArr = [
+      let NavArr: any = [
         {
           latitude: LocRes.coords.latitude.toFixed(7),
           longitude: LocRes.coords.longitude.toFixed(7),
@@ -67,7 +67,7 @@ const LocationDataContainer = (props) => {
 
   return (
     <div className="p-0">
-      <Card className="bg-zinc-900 w-80 lg:h-80 sm:w-96 m-1" variant="bordered">
+      <Card className="bg-zinc-900 w-80 lg:h-80 sm:w-96 m-1">
         <CardHeader className="bg-zinc-900 flex justify-between">
           {/* <Location set="curved" primaryColor="#ecedee" size='large'/> */}
           {/* <p className="">Location</p> */}

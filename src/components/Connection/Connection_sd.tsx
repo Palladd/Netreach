@@ -63,7 +63,7 @@ const Connection = (props) => {
   // Online/Offline checker
   setInterval(myCallback, 6000);
   function myCallback() {
-    setOnLineStatus(navigator.onLine);
+    setOnLineStatus(navigator.onLine ? 'online' : 'offline');
   }
 
   // height changer handler

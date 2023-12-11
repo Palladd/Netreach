@@ -10,7 +10,7 @@ import GoogleMaps from "./components/Map/Map";
 import Time from "./components/Time/Time";
 
 const App = (props) => {
-  const [latlongData, setlatlongData] = useState("");
+  const [latlongData, setlatlongData]:any = useState("");
   const retback = (returnedData) => {
     setlatlongData(...returnedData);
   };

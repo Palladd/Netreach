@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Card, CardBody, Input, Button, Spacer } from "@nextui-org/react";
 
-import API from "./API_sd";
-
 const Time = (props) => {
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleString());
 
@@ -28,8 +26,6 @@ const Time = (props) => {
             {timezone}
           </p>
           <br />
-
-          <API></API>
         </CardBody>
       </Card>
     </div>
