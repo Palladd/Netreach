@@ -1,6 +1,7 @@
 // import "./css/appStyles.css";
 import React, { useState } from "react";
-import { Spacer, NextUIProvider } from "@nextui-org/react";
+import { Input, NextUIProvider } from "@nextui-org/react";
+import axios from "axios";
 import "./css/appStyles.css";
 
 import Connection from "./components/Connection/Connection_sd";
@@ -13,6 +14,10 @@ const App = (props) => {
   const retback = (returnedData) => {
     setlatlongData(...returnedData);
   };
+
+  const [email, setEmail] = useState("");
+  const [bio, setBio] = useState("");
+  const [country, setCountry] = useState("");
 
   return (
     <NextUIProvider>
